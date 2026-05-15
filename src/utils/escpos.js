@@ -2,10 +2,11 @@
  * ESC/POS Command Constants and Helper Utilities
  */
 
-const ESC = 0x1b;
-const GS = 0x1d;
-const LF = 0x0a;
-const NUL = 0x00;
+const ESC = 0x1b; // Escape character
+const GS = 0x1d; // Group Separator
+const LF = 0x0a; // Line Feed
+const NUL = 0x00; // Null character
+const BEEP = 0x07; // Beep
 
 const COMMANDS = {
   // Initialization
@@ -39,6 +40,7 @@ const COMMANDS = {
 
   // Cash drawer
   CASH_DRAWER: Buffer.from([ESC, 0x70, 0x00, 0x19, 0xfa]),
+  BEEP: Buffer.from([0x1B, 0x42, 0x03, 0x01]),
 };
 
 /**
@@ -85,12 +87,20 @@ function parseRawData(input, encoding = 'base64') {
  * @param {string[]} lines
  * @returns {Buffer}
  */
-function buildTextReceipt(lines) {
+function buildTextReceipt(lines, options = {}) {
+
   const parts = [COMMANDS.INIT];
+
+  if (options.beep) {
+    parts.push(COMMANDS.BEEP);
+  }
+
   for (const line of lines) {
     parts.push(Buffer.from(line + '\n', 'utf8'));
   }
+
   parts.push(COMMANDS.CUT_FULL);
+
   return Buffer.concat(parts);
 }
 
@@ -100,6 +110,7 @@ module.exports = {
   GS,
   LF,
   NUL,
+  BEEP,
   validateEscPosData,
   parseRawData,
   buildTextReceipt,

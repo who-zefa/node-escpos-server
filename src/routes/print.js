@@ -46,21 +46,24 @@ router.post('/raw', async (req, res) => {
  * }
  */
 router.post('/text', async (req, res) => {
-  const { printer, lines } = req.body;
+  const { printer, lines, beep } = req.body;
 
   if (!printer) {
     return res.status(400).json({ error: '"printer" field is required' });
   }
+
   if (!Array.isArray(lines) || lines.length === 0) {
     return res.status(400).json({ error: '"lines" must be a non-empty array of strings' });
   }
 
   try {
-    const result = await printService.printText(printer, lines);
+    const result = await printService.printText(printer, lines, { beep });
     res.json(result);
   } catch (err) {
     logger.error('Text print job failed', { error: err.message, printer });
+
     const status = err.message.includes('not registered') ? 404 : 500;
+
     res.status(status).json({ error: err.message });
   }
 });

@@ -1,0 +1,24 @@
+[2026-05-15 13:40:50] ERROR: Text print job failed {"error":"Printer 'test-register' is not registered. Use GET /printers to list available printers.","printer":"test-register"}
+[2026-05-15 13:42:58] ERROR: Text print job failed {"error":"Connection timed out: 192.168.1.100:9100","printer":"office-printer"}
+[2026-05-15 15:11:57] ERROR: [usb-thermal] USB device not found (vendorId=0x4b8, productId=0x202) {}
+[2026-05-15 15:11:57] ERROR: Text print job failed {"error":"[usb-thermal] USB device not found (vendorId=0x4b8, productId=0x202)","printer":"usb-thermal"}
+[2026-05-15 15:12:32] ERROR: [usb-thermal] USB device not found (vendorId=0x4b8, productId=0x202) {}
+[2026-05-15 15:12:32] ERROR: Text print job failed {"error":"[usb-thermal] USB device not found (vendorId=0x4b8, productId=0x202)","printer":"usb-thermal"}
+[2026-05-15 15:12:35] ERROR: [usb-thermal] USB device not found (vendorId=0x4b8, productId=0x202) {}
+[2026-05-15 15:12:35] ERROR: Print job failed {"error":"[usb-thermal] USB device not found (vendorId=0x4b8, productId=0x202)","printer":"usb-thermal"}
+[2026-05-15 15:13:04] ERROR: [usb-thermal] USB device not found (vendorId=0x4b8, productId=0x202) {}
+[2026-05-15 15:13:04] ERROR: Text print job failed {"error":"[usb-thermal] USB device not found (vendorId=0x4b8, productId=0x202)","printer":"usb-thermal"}
+[2026-05-15 15:20:36] ERROR: Print job failed {"error":"Invalid ESC/POS data: Data is empty","printer":"usb-thermal"}
+[2026-05-15 15:21:09] ERROR: Print job failed {"error":"Invalid ESC/POS data: Data is empty","printer":"usb-thermal"}
+[2026-05-15 15:21:31] ERROR: Print job failed {"error":"Invalid ESC/POS data: Data is empty","printer":"usb-thermal"}
+[2026-05-15 15:21:37] ERROR: Print job failed {"error":"Invalid ESC/POS data: Data is empty","printer":"usb-thermal"}
+[2026-05-15 19:02:45] ERROR: [usb-thermal-1] USB device not found (vendorId=0x416, productId=0x5011) {}
+[2026-05-15 19:02:45] ERROR: Text print job failed {"error":"[usb-thermal-1] USB device not found (vendorId=0x416, productId=0x5011)","printer":"usb-thermal-1"}
+[2026-05-15 20:28:59] ERROR: [usb-thermal-1] USB device not found (vendorId=0x416, productId=0x5011) {}
+[2026-05-15 20:28:59] ERROR: Text print job failed {"error":"[usb-thermal-1] USB device not found (vendorId=0x416, productId=0x5011)","printer":"usb-thermal-1"}
+[2026-05-15 20:29:05] ERROR: [usb-thermal-1] USB device not found (vendorId=0x416, productId=0x5011) {}
+[2026-05-15 20:29:05] ERROR: Text print job failed {"error":"[usb-thermal-1] USB device not found (vendorId=0x416, productId=0x5011)","printer":"usb-thermal-1"}
+[2026-05-15 20:29:12] ERROR: [usb-thermal-1] USB device not found (vendorId=0x416, productId=0x5011) {}
+[2026-05-15 20:29:12] ERROR: Text print job failed {"error":"[usb-thermal-1] USB device not found (vendorId=0x416, productId=0x5011)","printer":"usb-thermal-1"}
+[2026-05-15 20:30:48] ERROR: [usb-thermal] USB device not found (vendorId=0x4b8, productId=0x202) {}
+[2026-05-15 20:30:48] ERROR: Text print job failed {"error":"[usb-thermal] USB device not found (vendorId=0x4b8, productId=0x202)","printer":"usb-thermal"}

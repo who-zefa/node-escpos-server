@@ -993,7 +993,7 @@ Thank you for your purchase!
       const response = await fetch(getServerUrl() + '/printers');
       const data = await response.json();
       
-      const selects = ['printPrinterSelect', 'rawPrinterSelect'];
+      const selects = ['printPrinterSelect', 'rawPrinterSelect', 'beepPrinterSelect'];
       selects.forEach(selectId => {
         const select = document.getElementById(selectId);
         select.innerHTML = data.printers.length === 0
@@ -1002,6 +1002,47 @@ Thank you for your purchase!
       });
     } catch (err) {
       console.error('Error refreshing print printers:', err);
+    }
+  }
+
+  // ============================================
+  // Beep Testing
+  // ============================================
+
+  async function refreshBeepPrinters() {
+    await refreshPrintPrinters();
+  }
+
+  async function testBeep() {
+    try {
+      const printer = document.getElementById('beepPrinterSelect').value.trim();
+      
+      if (!printer) {
+        setStatus('beepStatus', '✗ Please select a printer', 'error');
+        return;
+      }
+      
+      setStatus('beepStatus', `Testing beep on ${printer}...`, 'info');
+      
+      const response = await fetch(getServerUrl() + '/print/text', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          printer, 
+          lines: ['BEEP TEST'],
+          beep: true 
+        })
+      });
+      
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.error || 'Beep test failed');
+      }
+      
+      setStatus('beepStatus', '✓ Beep test sent successfully! (Check if printer beeped)\n\n' + JSON.stringify(data, null, 2), 'success');
+    } catch (err) {
+      setStatus('beepStatus', '✗ Beep test failed:\n' + err.message, 'error');
     }
   }
 
@@ -1022,13 +1063,19 @@ Thank you for your purchase!
         setStatus('textPrintStatus', 'Please enter receipt text', 'error');
         return;
       }
+
+      const beep = document.getElementById('textBeepCheckbox').checked;
       
       setStatus('textPrintStatus', `Sending text receipt to ${printer}...`, 'info');
       
       const response = await fetch(getServerUrl() + '/print/text', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+<<<<<<< HEAD
         body: JSON.stringify({ printer, lines, beep: true })
+=======
+        body: JSON.stringify({ printer, lines, beep })
+>>>>>>> 8f3b6a8 (Add beep test utilities and improve ESC/POS routes)
       });
       
       const data = await response.json();

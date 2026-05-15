@@ -95,3 +95,380 @@
 [2026-05-15 14:44:21] INFO: Printed 287 bytes via USB: usb-thermal
 [2026-05-15 14:44:21] INFO: Print job complete {"printer":"usb-thermal","bytes":287,"encoding":"base64"}
 [2026-05-15 14:44:21] INFO: USB printer disconnected: usb-thermal
+[2026-05-15 15:11:07] INFO: Node ESC/POS Server running at http://localhost:3000
+[2026-05-15 15:11:07] INFO: Press Ctrl+C to stop
+[2026-05-15 15:11:10] INFO: POST /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:11:10] INFO: Printer registered: usb-thermal (UsbPrinter)
+[2026-05-15 15:11:10] INFO: Printer registered via API: usb-thermal
+[2026-05-15 15:11:10] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:11:10] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:11:19] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:11:21] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:11:21] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:11:39] INFO: POST /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:11:43] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:11:43] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:11:43] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:11:52] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:11:56] INFO: POST /print/text {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:11:57] ERROR: [usb-thermal] USB device not found (vendorId=0x4b8, productId=0x202) {}
+[2026-05-15 15:11:57] ERROR: Text print job failed {"error":"[usb-thermal] USB device not found (vendorId=0x4b8, productId=0x202)","printer":"usb-thermal"}
+[2026-05-15 15:12:09] INFO: POST /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:12:09] INFO: Printer registered: usb-therma2 (UsbPrinter)
+[2026-05-15 15:12:09] INFO: Printer registered via API: usb-therma2
+[2026-05-15 15:12:09] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:12:09] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:12:12] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:12:12] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:12:12] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:12:13] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:12:14] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:12:14] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:12:17] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:12:17] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:12:17] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:12:17] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:12:30] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:12:32] INFO: POST /print/text {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:12:32] ERROR: [usb-thermal] USB device not found (vendorId=0x4b8, productId=0x202) {}
+[2026-05-15 15:12:32] ERROR: Text print job failed {"error":"[usb-thermal] USB device not found (vendorId=0x4b8, productId=0x202)","printer":"usb-thermal"}
+[2026-05-15 15:12:35] INFO: POST /print/raw {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:12:35] ERROR: [usb-thermal] USB device not found (vendorId=0x4b8, productId=0x202) {}
+[2026-05-15 15:12:35] ERROR: Print job failed {"error":"[usb-thermal] USB device not found (vendorId=0x4b8, productId=0x202)","printer":"usb-thermal"}
+[2026-05-15 15:12:48] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:13:03] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:13:04] INFO: POST /print/text {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:13:04] ERROR: [usb-thermal] USB device not found (vendorId=0x4b8, productId=0x202) {}
+[2026-05-15 15:13:04] ERROR: Text print job failed {"error":"[usb-thermal] USB device not found (vendorId=0x4b8, productId=0x202)","printer":"usb-thermal"}
+[2026-05-15 15:13:13] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:13:13] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:13:13] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:13:13] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:13:13] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:13:13] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:13:14] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:13:28] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:13:30] INFO: POST /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:13:30] INFO: Printer registered: usb-thermal-1 (UsbPrinter)
+[2026-05-15 15:13:30] INFO: Printer registered via API: usb-thermal-1
+[2026-05-15 15:13:30] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:13:30] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:13:32] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:13:45] INFO: POST /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:13:45] INFO: POST /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:13:45] INFO: POST /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:13:46] INFO: POST /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:13:48] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:14:13] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:14:13] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:14:13] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:14:13] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:14:13] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:14:20] INFO: Node ESC/POS Server running at http://localhost:3000
+[2026-05-15 15:14:20] INFO: Press Ctrl+C to stop
+[2026-05-15 15:14:29] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:14:33] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:14:37] INFO: GET /health {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:14:42] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:14:43] INFO: GET /health {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:16:12] INFO: POST /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:16:12] INFO: Printer registered: usb-thermal (UsbPrinter)
+[2026-05-15 15:16:12] INFO: Printer registered via API: usb-thermal
+[2026-05-15 15:16:12] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:16:12] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:16:17] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:16:48] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:16:48] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:16:48] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:16:48] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:16:48] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:17:06] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:17:34] INFO: POST /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:17:42] INFO: POST /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:17:42] INFO: Printer registered: usb-thermal-1 (UsbPrinter)
+[2026-05-15 15:17:42] INFO: Printer registered via API: usb-thermal-1
+[2026-05-15 15:17:42] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:17:42] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:17:56] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:19:03] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:19:04] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:19:09] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:19:13] INFO: POST /print/text {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:19:13] INFO: USB printer connected: usb-thermal {"vendorId":"0x416","productId":"0x5011"}
+[2026-05-15 15:19:13] INFO: Printed 265 bytes via USB: usb-thermal
+[2026-05-15 15:19:13] INFO: Print job complete {"printer":"usb-thermal","bytes":265,"encoding":"base64"}
+[2026-05-15 15:19:13] INFO: USB printer disconnected: usb-thermal
+[2026-05-15 15:19:58] INFO: POST /print/raw {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:19:58] INFO: USB printer connected: usb-thermal {"vendorId":"0x416","productId":"0x5011"}
+[2026-05-15 15:19:58] INFO: Printed 13 bytes via USB: usb-thermal
+[2026-05-15 15:19:58] INFO: Print job complete {"printer":"usb-thermal","bytes":13,"encoding":"base64"}
+[2026-05-15 15:19:58] INFO: USB printer disconnected: usb-thermal
+[2026-05-15 15:19:59] INFO: POST /print/raw {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:19:59] INFO: USB printer connected: usb-thermal {"vendorId":"0x416","productId":"0x5011"}
+[2026-05-15 15:19:59] INFO: Printed 13 bytes via USB: usb-thermal
+[2026-05-15 15:19:59] INFO: Print job complete {"printer":"usb-thermal","bytes":13,"encoding":"base64"}
+[2026-05-15 15:19:59] INFO: USB printer disconnected: usb-thermal
+[2026-05-15 15:20:00] INFO: POST /print/raw {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:20:00] INFO: USB printer connected: usb-thermal {"vendorId":"0x416","productId":"0x5011"}
+[2026-05-15 15:20:00] INFO: Printed 13 bytes via USB: usb-thermal
+[2026-05-15 15:20:00] INFO: Print job complete {"printer":"usb-thermal","bytes":13,"encoding":"base64"}
+[2026-05-15 15:20:00] INFO: USB printer disconnected: usb-thermal
+[2026-05-15 15:20:06] INFO: POST /print/raw {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:20:06] INFO: USB printer connected: usb-thermal {"vendorId":"0x416","productId":"0x5011"}
+[2026-05-15 15:20:06] INFO: Printed 18 bytes via USB: usb-thermal
+[2026-05-15 15:20:06] INFO: Print job complete {"printer":"usb-thermal","bytes":18,"encoding":"base64"}
+[2026-05-15 15:20:06] INFO: USB printer disconnected: usb-thermal
+[2026-05-15 15:20:36] INFO: POST /print/raw {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:20:36] ERROR: Print job failed {"error":"Invalid ESC/POS data: Data is empty","printer":"usb-thermal"}
+[2026-05-15 15:21:00] INFO: POST /print/text {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:21:00] INFO: USB printer connected: usb-thermal {"vendorId":"0x416","productId":"0x5011"}
+[2026-05-15 15:21:00] INFO: Printed 270 bytes via USB: usb-thermal
+[2026-05-15 15:21:00] INFO: Print job complete {"printer":"usb-thermal","bytes":270,"encoding":"base64"}
+[2026-05-15 15:21:00] INFO: USB printer disconnected: usb-thermal
+[2026-05-15 15:21:09] INFO: POST /print/raw {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:21:09] ERROR: Print job failed {"error":"Invalid ESC/POS data: Data is empty","printer":"usb-thermal"}
+[2026-05-15 15:21:31] INFO: POST /print/raw {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:21:31] ERROR: Print job failed {"error":"Invalid ESC/POS data: Data is empty","printer":"usb-thermal"}
+[2026-05-15 15:21:37] INFO: POST /print/raw {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 15:21:37] ERROR: Print job failed {"error":"Invalid ESC/POS data: Data is empty","printer":"usb-thermal"}
+[2026-05-15 17:35:01] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:35:01] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:35:01] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:35:01] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:35:01] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:35:10] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:35:24] INFO: Node ESC/POS Server running at http://localhost:3000
+[2026-05-15 17:35:24] INFO: Press Ctrl+C to stop
+[2026-05-15 17:35:30] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:35:30] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:35:31] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:35:37] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:35:57] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:36:07] INFO: POST /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:36:07] INFO: Printer registered: usb-thermal-1 (UsbPrinter)
+[2026-05-15 17:36:07] INFO: Printer registered via API: usb-thermal-1
+[2026-05-15 17:36:07] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:36:07] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:36:11] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:36:14] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:36:14] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:36:17] INFO: POST /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:36:21] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:36:23] INFO: POST /print/text {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:36:23] INFO: USB printer connected: usb-thermal-1 {"vendorId":"0x416","productId":"0x5011"}
+[2026-05-15 17:36:23] INFO: Printed 265 bytes via USB: usb-thermal-1
+[2026-05-15 17:36:23] INFO: Print job complete {"printer":"usb-thermal-1","bytes":265,"encoding":"base64"}
+[2026-05-15 17:36:23] INFO: USB printer disconnected: usb-thermal-1
+[2026-05-15 17:38:59] INFO: Node ESC/POS Server running at http://localhost:3000
+[2026-05-15 17:38:59] INFO: Press Ctrl+C to stop
+[2026-05-15 17:39:03] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:39:03] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:39:03] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:39:03] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:39:03] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:39:06] INFO: GET /health {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:39:07] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:39:16] INFO: POST /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:39:16] INFO: Printer registered: usb-thermal-1 (UsbPrinter)
+[2026-05-15 17:39:16] INFO: Printer registered via API: usb-thermal-1
+[2026-05-15 17:39:16] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:39:16] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:39:19] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:39:21] INFO: POST /print/text {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:39:22] INFO: USB printer connected: usb-thermal-1 {"vendorId":"0x416","productId":"0x5011"}
+[2026-05-15 17:39:22] INFO: Printed 265 bytes via USB: usb-thermal-1
+[2026-05-15 17:39:22] INFO: Print job complete {"printer":"usb-thermal-1","bytes":265,"encoding":"base64"}
+[2026-05-15 17:39:22] INFO: USB printer disconnected: usb-thermal-1
+[2026-05-15 17:40:45] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:40:45] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:40:45] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:40:45] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:40:45] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:40:47] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:40:53] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:40:54] INFO: POST /print/text {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 17:40:54] INFO: USB printer connected: usb-thermal-1 {"vendorId":"0x416","productId":"0x5011"}
+[2026-05-15 17:40:54] INFO: Printed 265 bytes via USB: usb-thermal-1
+[2026-05-15 17:40:54] INFO: Print job complete {"printer":"usb-thermal-1","bytes":265,"encoding":"base64"}
+[2026-05-15 17:40:54] INFO: USB printer disconnected: usb-thermal-1
+[2026-05-15 19:02:45] INFO: POST /print/text {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 19:02:45] ERROR: [usb-thermal-1] USB device not found (vendorId=0x416, productId=0x5011) {}
+[2026-05-15 19:02:45] ERROR: Text print job failed {"error":"[usb-thermal-1] USB device not found (vendorId=0x416, productId=0x5011)","printer":"usb-thermal-1"}
+[2026-05-15 19:03:07] INFO: Node ESC/POS Server running at http://localhost:3000
+[2026-05-15 19:03:07] INFO: Press Ctrl+C to stop
+[2026-05-15 20:28:31] INFO: Node ESC/POS Server running at http://localhost:3000
+[2026-05-15 20:28:31] INFO: Press Ctrl+C to stop
+[2026-05-15 20:28:36] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:28:36] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:28:36] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:28:36] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:28:36] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:28:45] INFO: POST /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:28:45] INFO: Printer registered: usb-thermal-1 (UsbPrinter)
+[2026-05-15 20:28:45] INFO: Printer registered via API: usb-thermal-1
+[2026-05-15 20:28:45] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:28:45] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:28:51] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:28:58] INFO: POST /print/text {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:28:59] ERROR: [usb-thermal-1] USB device not found (vendorId=0x416, productId=0x5011) {}
+[2026-05-15 20:28:59] ERROR: Text print job failed {"error":"[usb-thermal-1] USB device not found (vendorId=0x416, productId=0x5011)","printer":"usb-thermal-1"}
+[2026-05-15 20:29:05] INFO: POST /print/text {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:05] ERROR: [usb-thermal-1] USB device not found (vendorId=0x416, productId=0x5011) {}
+[2026-05-15 20:29:05] ERROR: Text print job failed {"error":"[usb-thermal-1] USB device not found (vendorId=0x416, productId=0x5011)","printer":"usb-thermal-1"}
+[2026-05-15 20:29:11] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:12] INFO: POST /print/text {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:12] ERROR: [usb-thermal-1] USB device not found (vendorId=0x416, productId=0x5011) {}
+[2026-05-15 20:29:12] ERROR: Text print job failed {"error":"[usb-thermal-1] USB device not found (vendorId=0x416, productId=0x5011)","printer":"usb-thermal-1"}
+[2026-05-15 20:29:25] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:31] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:31] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:31] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:31] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:31] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:32] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:32] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:32] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:32] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:32] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:32] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:32] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:32] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:32] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:32] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:33] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:33] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:33] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:33] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:33] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:38] INFO: GET /health {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:47] INFO: GET /health {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:49] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:56] INFO: POST /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:29:59] INFO: POST /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:30:04] INFO: Node ESC/POS Server running at http://localhost:3000
+[2026-05-15 20:30:04] INFO: Press Ctrl+C to stop
+[2026-05-15 20:30:06] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:30:06] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:30:06] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:30:06] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:30:06] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:30:10] INFO: POST /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:30:10] INFO: Printer registered: usb-thermal (UsbPrinter)
+[2026-05-15 20:30:10] INFO: Printer registered via API: usb-thermal
+[2026-05-15 20:30:10] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:30:10] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:30:15] INFO: POST /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:30:15] INFO: Printer registered: usb-thermal-1 (UsbPrinter)
+[2026-05-15 20:30:15] INFO: Printer registered via API: usb-thermal-1
+[2026-05-15 20:30:15] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:30:15] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:30:21] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:30:29] INFO: POST /print/text {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:30:29] INFO: USB printer connected: usb-thermal-1 {"vendorId":"0x416","productId":"0x5011"}
+[2026-05-15 20:30:29] INFO: Printed 15 bytes via USB: usb-thermal-1
+[2026-05-15 20:30:29] INFO: Print job complete {"printer":"usb-thermal-1","bytes":15,"encoding":"base64"}
+[2026-05-15 20:30:29] INFO: USB printer disconnected: usb-thermal-1
+[2026-05-15 20:30:33] INFO: POST /print/text {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:30:33] INFO: USB printer connected: usb-thermal-1 {"vendorId":"0x416","productId":"0x5011"}
+[2026-05-15 20:30:33] INFO: Printed 15 bytes via USB: usb-thermal-1
+[2026-05-15 20:30:33] INFO: Print job complete {"printer":"usb-thermal-1","bytes":15,"encoding":"base64"}
+[2026-05-15 20:30:33] INFO: USB printer disconnected: usb-thermal-1
+[2026-05-15 20:30:48] INFO: POST /print/text {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:30:48] ERROR: [usb-thermal] USB device not found (vendorId=0x4b8, productId=0x202) {}
+[2026-05-15 20:30:48] ERROR: Text print job failed {"error":"[usb-thermal] USB device not found (vendorId=0x4b8, productId=0x202)","printer":"usb-thermal"}
+[2026-05-15 20:30:57] INFO: POST /print/text {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:30:57] INFO: USB printer connected: usb-thermal-1 {"vendorId":"0x416","productId":"0x5011"}
+[2026-05-15 20:30:57] INFO: Printed 265 bytes via USB: usb-thermal-1
+[2026-05-15 20:30:57] INFO: Print job complete {"printer":"usb-thermal-1","bytes":265,"encoding":"base64"}
+[2026-05-15 20:30:57] INFO: USB printer disconnected: usb-thermal-1
+[2026-05-15 20:33:40] INFO: Node ESC/POS Server running at http://localhost:3000
+[2026-05-15 20:33:40] INFO: Press Ctrl+C to stop
+[2026-05-15 20:33:48] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:33:48] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:33:48] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:33:48] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:33:48] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:33:55] INFO: POST /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:33:55] INFO: Printer registered: usb-thermal-1 (UsbPrinter)
+[2026-05-15 20:33:55] INFO: Printer registered via API: usb-thermal-1
+[2026-05-15 20:33:55] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:33:55] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:33:57] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:34:00] INFO: POST /print/text {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:34:00] INFO: USB printer connected: usb-thermal-1 {"vendorId":"0x416","productId":"0x5011"}
+[2026-05-15 20:34:00] INFO: Printed 15 bytes via USB: usb-thermal-1
+[2026-05-15 20:34:00] INFO: Print job complete {"printer":"usb-thermal-1","bytes":15,"encoding":"base64"}
+[2026-05-15 20:34:00] INFO: USB printer disconnected: usb-thermal-1
+[2026-05-15 20:34:28] INFO: Node ESC/POS Server running at http://localhost:3000
+[2026-05-15 20:34:28] INFO: Press Ctrl+C to stop
+[2026-05-15 20:34:33] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:34:33] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:34:33] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:34:33] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:34:33] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:34:38] INFO: POST /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:34:38] INFO: Printer registered: usb-thermal-1 (UsbPrinter)
+[2026-05-15 20:34:38] INFO: Printer registered via API: usb-thermal-1
+[2026-05-15 20:34:38] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:34:38] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:34:42] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:34:44] INFO: POST /print/text {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:34:44] INFO: USB printer connected: usb-thermal-1 {"vendorId":"0x416","productId":"0x5011"}
+[2026-05-15 20:34:44] INFO: Printed 15 bytes via USB: usb-thermal-1
+[2026-05-15 20:34:44] INFO: Print job complete {"printer":"usb-thermal-1","bytes":15,"encoding":"base64"}
+[2026-05-15 20:34:44] INFO: USB printer disconnected: usb-thermal-1
+[2026-05-15 20:35:32] INFO: Node ESC/POS Server running at http://localhost:3000
+[2026-05-15 20:35:32] INFO: Press Ctrl+C to stop
+[2026-05-15 20:35:36] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:35:36] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:35:36] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:35:36] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:35:36] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:35:41] INFO: POST /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:35:41] INFO: Printer registered: usb-thermal-1 (UsbPrinter)
+[2026-05-15 20:35:41] INFO: Printer registered via API: usb-thermal-1
+[2026-05-15 20:35:41] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:35:41] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:35:45] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:35:47] INFO: POST /print/text {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:35:47] INFO: USB printer connected: usb-thermal-1 {"vendorId":"0x416","productId":"0x5011"}
+[2026-05-15 20:35:47] INFO: Printed 15 bytes via USB: usb-thermal-1
+[2026-05-15 20:35:47] INFO: Print job complete {"printer":"usb-thermal-1","bytes":15,"encoding":"base64"}
+[2026-05-15 20:35:47] INFO: USB printer disconnected: usb-thermal-1
+[2026-05-15 20:36:37] INFO: Node ESC/POS Server running at http://localhost:3000
+[2026-05-15 20:36:37] INFO: Press Ctrl+C to stop
+[2026-05-15 20:36:40] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:36:40] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:36:40] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:36:40] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:36:40] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:36:48] INFO: POST /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:36:48] INFO: Printer registered: usb-thermal-1 (UsbPrinter)
+[2026-05-15 20:36:48] INFO: Printer registered via API: usb-thermal-1
+[2026-05-15 20:36:48] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:36:48] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:36:52] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:36:53] INFO: POST /print/text {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:36:53] INFO: USB printer connected: usb-thermal-1 {"vendorId":"0x416","productId":"0x5011"}
+[2026-05-15 20:36:53] INFO: Printed 15 bytes via USB: usb-thermal-1
+[2026-05-15 20:36:53] INFO: Print job complete {"printer":"usb-thermal-1","bytes":15,"encoding":"base64"}
+[2026-05-15 20:36:53] INFO: USB printer disconnected: usb-thermal-1
+[2026-05-15 20:45:18] INFO: Node ESC/POS Server running at http://localhost:3000
+[2026-05-15 20:45:18] INFO: Press Ctrl+C to stop
+[2026-05-15 20:45:23] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:45:23] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:45:23] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:45:23] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:45:23] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:45:25] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:45:30] INFO: POST /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:45:30] INFO: Printer registered: usb-thermal-1 (UsbPrinter)
+[2026-05-15 20:45:30] INFO: Printer registered via API: usb-thermal-1
+[2026-05-15 20:45:30] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:45:30] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:45:36] INFO: GET /printers {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:45:38] INFO: POST /print/text {"ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36"}
+[2026-05-15 20:45:38] INFO: USB printer connected: usb-thermal-1 {"vendorId":"0x416","productId":"0x5011"}
+[2026-05-15 20:45:38] INFO: Printed 15 bytes via USB: usb-thermal-1
+[2026-05-15 20:45:38] INFO: Print job complete {"printer":"usb-thermal-1","bytes":15,"encoding":"base64"}
+[2026-05-15 20:45:38] INFO: USB printer disconnected: usb-thermal-1
