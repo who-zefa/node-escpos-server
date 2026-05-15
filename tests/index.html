@@ -499,6 +499,24 @@ Bixby: 0x1163
 
   <!-- TAB 4: Print Jobs -->
   <div id="printing" class="tab-content">
+    <div class="panel">
+      <h2>🔊 Beep Test</h2>
+      <div class="info-box">
+        💡 Test the beep feature on your printer. Make sure your printer supports the beep command (ESC/POS BEEP).
+      </div>
+      <div class="form-group">
+        <label>Select Printer</label>
+        <select id="beepPrinterSelect">
+          <option value="">-- Select a printer --</option>
+        </select>
+      </div>
+      <div class="btn-row">
+        <button class="secondary" onclick="refreshBeepPrinters()">Refresh List</button>
+        <button onclick="testBeep()">🔊 Test Beep</button>
+      </div>
+      <div class="status" id="beepStatus"></div>
+    </div>
+
     <div class="grid-2">
       <div class="panel">
         <h2>Text Receipt Printing</h2>
@@ -521,6 +539,13 @@ TOTAL                         $18.00
 
 Thank you for your purchase!
         </textarea>
+        </div>
+
+        <div class="form-group">
+          <label style="display: flex; align-items: center; gap: 8px; font-weight: normal; text-transform: none;">
+            <input type="checkbox" id="textBeepCheckbox" />
+            Enable beep after printing
+          </label>
         </div>
 
         <button onclick="sendTextPrint()">Send Text Receipt</button>
@@ -870,8 +895,8 @@ Thank you for your purchase!
 
   function populateUsbExample() {
     document.getElementById('usbName').value = 'usb-thermal-1';
-    document.getElementById('usbVendorId').value = '0x04b8';
-    document.getElementById('usbProductId').value = '0x0202';
+    document.getElementById('usbVendorId').value = '0x0416';
+    document.getElementById('usbProductId').value = '0x5011';
   }
 
   async function registerUsbPrinter() {
@@ -927,38 +952,38 @@ Thank you for your purchase!
     }
   }
 
-  async function testUsbPrinterConnection() {
-    try {
-      const printerName = document.getElementById('usbPrinterSelect').value.trim();
-      
-      if (!printerName) {
-        setStatus('usbTestStatus', '✗ Please select a printer', 'error');
-        return;
-      }
-      
-      setStatus('usbTestStatus', `Testing connection to ${printerName}...`, 'info');
-      
-      const response = await fetch(getServerUrl() + '/print/text', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          printer: printerName,
-          lines: ['USB Test']
-        })
-      });
-      
-      const data = await response.json();
-      
-      if (response.ok) {
-        setStatus('usbTestStatus', '✓ USB printer responsive!\n\n' + JSON.stringify(data, null, 2), 'success');
-      } else {
-        setStatus('usbTestStatus', '⚠ USB printer not found or not connected:\n' + JSON.stringify(data, null, 2), 'error');
-      }
-    } catch (err) {
-      setStatus('usbTestStatus', '✗ Connection test failed:\n' + err.message, 'error');
+ async function testUsbPrinterConnection() {
+  try {
+    const printerName = document.getElementById('usbPrinterSelect').value.trim();
+    
+    if (!printerName) {
+      setStatus('usbTestStatus', 'Please select a printer', 'error');
+      return;
     }
-  }
 
+    setStatus('usbTestStatus', `Testing connection to ${printerName}...`, 'info');
+    
+    const response = await fetch(getServerUrl() + '/print/text', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        printer: printerName,
+        lines: ['USB Test'],
+        beep: true
+      })
+    });
+    
+    const data = await response.json();
+    
+    if (response.ok) {
+      setStatus('usbTestStatus', 'USB printer responsive!\n\n' + JSON.stringify(data, null, 2), 'success');
+    } else {
+      setStatus('usbTestStatus', 'USB printer not found or not connected:\n' + JSON.stringify(data, null, 2), 'error');
+    }
+  } catch (err) {
+    setStatus('usbTestStatus', 'Connection test failed:\n' + err.message, 'error');
+  }
+}
   // ============================================
   // Print Functions
   // ============================================
@@ -985,7 +1010,7 @@ Thank you for your purchase!
       const printer = document.getElementById('printPrinterSelect').value.trim();
       
       if (!printer) {
-        setStatus('textPrintStatus', '✗ Please select a printer', 'error');
+        setStatus('textPrintStatus', 'Please select a printer', 'error');
         return;
       }
       
@@ -994,7 +1019,7 @@ Thank you for your purchase!
         .filter(line => line.trim());
       
       if (lines.length === 0) {
-        setStatus('textPrintStatus', '✗ Please enter receipt text', 'error');
+        setStatus('textPrintStatus', 'Please enter receipt text', 'error');
         return;
       }
       
@@ -1003,7 +1028,7 @@ Thank you for your purchase!
       const response = await fetch(getServerUrl() + '/print/text', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ printer, lines })
+        body: JSON.stringify({ printer, lines, beep: true })
       });
       
       const data = await response.json();
@@ -1012,9 +1037,9 @@ Thank you for your purchase!
         throw new Error(data.error || 'Print failed');
       }
       
-      setStatus('textPrintStatus', '✓ Text printed successfully!\n\n' + JSON.stringify(data, null, 2), 'success');
+      setStatus('textPrintStatus', 'Text printed successfully!\n\n' + JSON.stringify(data, null, 2), 'success');
     } catch (err) {
-      setStatus('textPrintStatus', '✗ Print failed:\n' + err.message, 'error');
+      setStatus('textPrintStatus', 'Print failed:\n' + err.message, 'error');
     }
   }
 
@@ -1025,12 +1050,12 @@ Thank you for your purchase!
       const data = document.getElementById('rawData').value.trim();
       
       if (!printer) {
-        setStatus('rawPrintStatus', '✗ Please select a printer', 'error');
+        setStatus('rawPrintStatus', 'Please select a printer', 'error');
         return;
       }
       
       if (!data) {
-        setStatus('rawPrintStatus', '✗ Please enter raw data', 'error');
+        setStatus('rawPrintStatus', 'Please enter raw data', 'error');
         return;
       }
       
@@ -1048,9 +1073,9 @@ Thank you for your purchase!
         throw new Error(responseData.error || 'Print failed');
       }
       
-      setStatus('rawPrintStatus', '✓ Raw data sent successfully!\n\n' + JSON.stringify(responseData, null, 2), 'success');
+      setStatus('rawPrintStatus', 'Raw data sent successfully!\n\n' + JSON.stringify(responseData, null, 2), 'success');
     } catch (err) {
-      setStatus('rawPrintStatus', '✗ Print failed:\n' + err.message, 'error');
+      setStatus('rawPrintStatus', 'Print failed:\n' + err.message, 'error');
     }
   }
 
@@ -1077,7 +1102,7 @@ Thank you for your purchase!
       const printerName = document.getElementById('deletePrinterSelect').value.trim();
       
       if (!printerName) {
-        setStatus('deleteStatus', '✗ Please select a printer', 'error');
+        setStatus('deleteStatus', 'Please select a printer', 'error');
         return;
       }
       
