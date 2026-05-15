@@ -1071,11 +1071,8 @@ Thank you for your purchase!
       const response = await fetch(getServerUrl() + '/print/text', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-        body: JSON.stringify({ printer, lines, beep: true })
-=======
+        body: JSON.stringify({ printer, lines, beep: true }),
         body: JSON.stringify({ printer, lines, beep })
->>>>>>> 8f3b6a8 (Add beep test utilities and improve ESC/POS routes)
       });
       
       const data = await response.json();
