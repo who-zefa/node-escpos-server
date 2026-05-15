@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Node ESC/POS Server - USB & Network Printer Test Suite</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 100%);
+      color: #e0e0e0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      margin: 0;
+      color: #00b894;
+      font-size: 28px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .header p {
+      margin: 5px 0 0 0;
+      color: #888;
+      font-size: 14px;
+    }
+
+    .tab-container {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #333;
+      overflow-x: auto;
+    }
+
+    .tab-btn {
+      padding: 12px 20px;
+      background: #262626;
+      border: none;
+      color: #888;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .tab-btn:hover {
+      color: #00b894;
+    }
+
+    .tab-btn.active {
+      color: #00b894;
+      border-bottom-color: #00b894;
+      background: #1a1a1a;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .panel {
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid #333;
+    }
+
+    .panel h2 {
+      margin-top: 0;
+      color: #00b894;
+      font-size: 18px;
+      border-bottom: 2px solid #333;
+      padding-bottom: 10px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .form-row.full {
+      grid-template-columns: 1fr;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-size: 13px;
+      color: #aaa;
+      margin-bottom: 5px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    input,
+    textarea,
+    select {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #333;
+      background: #262626;
+      color: #e0e0e0;
+      font-size: 14px;
+      transition: all 0.3s;
+      font-family: 'Courier New', monospace;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: #00b894;
+      background: #2a2a2a;
+      box-shadow: 0 0 8px rgba(0, 184, 148, 0.3);
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+    }
+
+    button {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #00b894;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    button:hover {
+      background: #00a080;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 184, 148, 0.4);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    button.secondary {
+      background: #444;
+      color: #e0e0e0;
+    }
+
+    button.secondary:hover {
+      background: #555;
+    }
+
+    button.danger {
+      background: #ff5252;
+    }
+
+    button.danger:hover {
+      background: #ff3838;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .btn-row button {
+      flex: 1;
+      min-width: 150px;
+    }
+
+    .status {
+      padding: 15px;
+      border-radius: 8px;
+      background: #262626;
+      border-left: 4px solid #666;
+      white-space: pre-wrap;
+      overflow-wrap: break-word;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      max-height: 300px;
+      overflow-y: auto;
+      margin-top: 15px;
+    }
+
+    .status.success {
+      border-left-color: #00ff99;
+      background: rgba(0, 255, 153, 0.05);
+    }
+
+    .status.error {
+      border-left-color: #ff5252;
+      background: rgba(255, 82, 82, 0.05);
+    }
+
+    .status.info {
+      border-left-color: #5eb3ff;
+      background: rgba(94, 179, 255, 0.05);
+    }
+
+    .printer-card {
+      background: #262626;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 10px;
+      border: 1px solid #333;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .printer-card:hover {
+      border-color: #00b894;
+      background: #2a2a2a;
+    }
+
+    .printer-card strong {
+      color: #00b894;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .printer-card small {
+      color: #888;
+      font-size: 12px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    @media (max-width: 900px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .info-box {
+      background: rgba(94, 179, 255, 0.1);
+      border: 1px solid rgba(94, 179, 255, 0.3);
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 15px;
+      font-size: 13px;
+      color: #a0d0ff;
+    }
+
+    .code-block {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 6px;
+      padding: 10px;
+      margin: 10px 0;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      overflow-x: auto;
+      color: #00ff99;
+    }
+
+    .success-check {
+      color: #00ff99;
+      font-weight: bold;
+    }
+
+    .error-x {
+      color: #ff5252;
+      font-weight: bold;
+    }
+
+    h3 {
+      color: #00b894;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .test-result {
+      background: #262626;
+      border-radius: 6px;
+      padding: 10px;
+      margin: 8px 0;
+      font-size: 12px;
+      border-left: 3px solid #666;
+    }
+
+    .test-result.passed {
+      border-left-color: #00ff99;
+      color: #00ff99;
+    }
+
+    .test-result.failed {
+      border-left-color: #ff5252;
+      color: #ff5252;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <h1>Node ESC/POS Server</h1>
+    <p>USB & Network Printer Test Suite</p>
+  </div>
+
+  <!-- Server Connection Panel -->
+  <div class="panel">
+    <h2>Server Configuration</h2>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Server URL</label>
+        <input type="text" id="serverUrl" value="http://localhost:3000" />
+      </div>
+      <div class="form-group">
+        <button onclick="testConnection()" style="align-self: flex-end;">Test Connection</button>
+      </div>
+    </div>
+    <div class="status" id="connectionStatus" style="display:none;"></div>
+  </div>
+
+  <!-- Tab Navigation -->
+  <div class="tab-container">
+    <button class="tab-btn active" onclick="switchTab('overview')">Overview</button>
+    <button class="tab-btn" onclick="switchTab('network')">Network Printer</button>
+    <button class="tab-btn" onclick="switchTab('usb')">USB Printer</button>
+    <button class="tab-btn" onclick="switchTab('printing')">Print Jobs</button>
+    <button class="tab-btn" onclick="switchTab('advanced')">Advanced</button>
+  </div>
+
+  <!-- TAB 1: Overview -->
+  <div id="overview" class="tab-content active">
+    <div class="panel">
+      <h2>Server Status & Printer Registry</h2>
+      <div class="btn-row">
+        <button onclick="checkHealth()">Check Health</button>
+        <button onclick="listPrinters()">List Printers</button>
+        <button onclick="clearStatus()">Clear Status</button>
+      </div>
+      <div class="status" id="overviewStatus">Click buttons to check server status...</div>
+    </div>
+
+    <div class="panel">
+      <h2>Registered Printers</h2>
+      <div id="printerList">
+        <p style="color: #888;">No printers registered yet. Use the Network or USB tabs to register.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 2: Network Printer -->
+  <div id="network" class="tab-content">
+    <div class="panel">
+      <h2>Network Printer Registration</h2>
+      <div class="info-box">
+        💡 Network printers connect via TCP/IP (typically port 9100). Enter the printer's IP address or hostname.
+      </div>
+
+      <div class="form-row full">
+        <div class="form-group">
+          <label>Printer Name</label>
+          <input type="text" id="networkName" value="network-kitchen" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Host (IP or Hostname)</label>
+          <input type="text" id="networkHost" value="192.168.1.100" placeholder="e.g., 192.168.1.100" />
+        </div>
+        <div class="form-group">
+          <label>Port</label>
+          <input type="number" id="networkPort" value="9100" min="1" max="65535" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Timeout (ms)</label>
+          <input type="number" id="networkTimeout" value="5000" min="1000" />
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button onclick="registerNetworkPrinter()">Register Network Printer</button>
+        <button class="secondary" onclick="populateNetworkExample()">Load Example</button>
+      </div>
+      <div class="status" id="networkStatus"></div>
+    </div>
+
+    <div class="panel">
+      <h2>Test Network Printer Connection</h2>
+      <div class="form-group">
+        <label>Select Registered Network Printer</label>
+        <select id="networkPrinterSelect">
+          <option value="">-- No printers registered --</option>
+        </select>
+      </div>
+      <div class="btn-row">
+        <button class="secondary" onclick="refreshNetworkPrinters()">Refresh List</button>
+        <button class="secondary" onclick="testNetworkPrinterConnection()">Test Connection</button>
+      </div>
+      <div class="status" id="networkTestStatus"></div>
+    </div>
+  </div>
+
+  <!-- TAB 3: USB Printer -->
+  <div id="usb" class="tab-content">
+    <div class="panel">
+      <h2>USB Printer Registration</h2>
+      <div class="info-box">
+        💡 USB printers require Vendor ID and Product ID (in hex format like 0x04b8). Use lsusb (Linux) or Device Manager (Windows) to find these.
+      </div>
+
+      <div class="form-row full">
+        <div class="form-group">
+          <label>Printer Name</label>
+          <input type="text" id="usbName" value="usb-thermal" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Vendor ID (hex)</label>
+          <input type="text" id="usbVendorId" value="0x04b8" placeholder="e.g., 0x04b8" />
+        </div>
+        <div class="form-group">
+          <label>Product ID (hex)</label>
+          <input type="text" id="usbProductId" value="0x0202" placeholder="e.g., 0x0202" />
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button onclick="registerUsbPrinter()">Register USB Printer</button>
+        <button class="secondary" onclick="populateUsbExample()">Load Example</button>
+      </div>
+      <div class="status" id="usbStatus"></div>
+    </div>
+
+    <div class="panel">
+      <h2>Test USB Printer Connection</h2>
+      <div class="form-group">
+        <label>Select Registered USB Printer</label>
+        <select id="usbPrinterSelect">
+          <option value="">-- No printers registered --</option>
+        </select>
+      </div>
+      <div class="btn-row">
+        <button class="secondary" onclick="refreshUsbPrinters()">Refresh List</button>
+        <button class="secondary" onclick="testUsbPrinterConnection()">Test Connection</button>
+      </div>
+      <div class="status" id="usbTestStatus"></div>
+    </div>
+
+    <div class="panel">
+      <h2>Common USB Printer IDs</h2>
+      <div class="code-block">
+Epson: 0x04b8
+Zebra: 0x0a5f
+Star: 0x0519
+Seiko: 0x0901
+Bixby: 0x1163
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 4: Print Jobs -->
+  <div id="printing" class="tab-content">
+    <div class="grid-2">
+      <div class="panel">
+        <h2>Text Receipt Printing</h2>
+        <div class="form-group">
+          <label>Select Printer</label>
+          <select id="printPrinterSelect">
+            <option value="">-- Select a printer --</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Receipt Text (line-by-line)</label>
+          <textarea id="receiptText">My Store
+====================================
+Item 1                        $10.00
+Item 2                         $5.00
+Item 3                         $3.00
+====================================
+TOTAL                         $18.00
+
+Thank you for your purchase!
+        </textarea>
+        </div>
+
+        <button onclick="sendTextPrint()">Send Text Receipt</button>
+        <div class="status" id="textPrintStatus"></div>
+      </div>
+
+      <div class="panel">
+        <h2>Raw ESC/POS Data</h2>
+        <div class="form-group">
+          <label>Select Printer</label>
+          <select id="rawPrinterSelect">
+            <option value="">-- Select a printer --</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Data Format</label>
+          <select id="dataEncoding">
+            <option value="base64">Base64</option>
+            <option value="hex">Hexadecimal</option>
+            <option value="text">Plain Text</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Raw Data</label>
+          <textarea id="rawData">SGVsbG8gV29ybGQhCg==</textarea>
+        </div>
+
+        <button onclick="sendRawPrint()">Send Raw ESC/POS</button>
+        <div class="status" id="rawPrintStatus"></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>ESC/POS Command Examples</h2>
+      <h3>Initialize Printer (Base64)</h3>
+      <div class="code-block">G0A=</div>
+      <small style="color: #888;">ESC @</small>
+
+      <h3>Reset & Print "Hello" (Base64)</h3>
+      <div class="code-block">G0BGZWxsbyEK</div>
+      <small style="color: #888;">ESC @ followed by "Hello!\n"</small>
+
+      <h3>Feed Paper (Hex)</h3>
+      <div class="code-block">1b 64 05</div>
+      <small style="color: #888;">ESC d (feed 5 lines)</small>
+
+      <h3>Cut Paper (Hex)</h3>
+      <div class="code-block">1d 56 00</div>
+      <small style="color: #888;">GS V (partial cut)</small>
+    </div>
+  </div>
+
+  <!-- TAB 5: Advanced -->
+  <div id="advanced" class="tab-content">
+    <div class="panel">
+      <h2>Printer Management</h2>
+      <div class="form-group">
+        <label>Select Printer to Delete</label>
+        <select id="deletePrinterSelect">
+          <option value="">-- Select a printer --</option>
+        </select>
+      </div>
+      <div class="btn-row">
+        <button class="secondary" onclick="refreshDeletePrinters()">Refresh List</button>
+        <button class="danger" onclick="deletePrinter()">Delete Printer</button>
+      </div>
+      <div class="status" id="deleteStatus"></div>
+    </div>
+
+    <div class="panel">
+      <h2>Test Utilities</h2>
+      <h3>Generate Base64 Samples</h3>
+      <div class="btn-row">
+        <button class="secondary" onclick="generateBase64Sample('hello')">Hello World</button>
+        <button class="secondary" onclick="generateBase64Sample('reset')">Reset Only</button>
+        <button class="secondary" onclick="generateBase64Sample('feed')">Feed Paper</button>
+      </div>
+      <div style="margin-top: 10px;">
+        <textarea id="generatedBase64" style="min-height: 100px;"></textarea>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>API Documentation</h2>
+      <h3>Health Check</h3>
+      <div class="code-block">GET /health</div>
+
+      <h3>List Printers</h3>
+      <div class="code-block">GET /printers</div>
+
+      <h3>Register Printer</h3>
+      <div class="code-block">POST /printers
+{
+  "type": "network|usb",
+  "name": "my-printer",
+  "host": "192.168.1.100",    // network only
+  "port": 9100,               // network only
+  "vendorId": "0x04b8",       // usb only
+  "productId": "0x0202"       // usb only
+}</div>
+
+      <h3>Print Text</h3>
+      <div class="code-block">POST /print/text
+{
+  "printer": "my-printer",
+  "lines": ["Line 1", "Line 2"]
+}</div>
+
+      <h3>Print Raw</h3>
+      <div class="code-block">POST /print/raw
+{
+  "printer": "my-printer",
+  "data": "SGVsbG8gV29ybGQh",
+  "encoding": "base64"
+}</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // ============================================
+  // UI & Tab Management
+  // ============================================
+
+  function switchTab(tabName) {
+    // Hide all tabs
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.classList.remove('active');
+    });
+    
+    // Deactivate all buttons
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.classList.remove('active');
+    });
+    
+    // Show selected tab
+    document.getElementById(tabName).classList.add('active');
+    
+    // Activate selected button
+    event.target.classList.add('active');
+    
+    // Refresh printer lists when tabs load
+    if (tabName === 'printing') {
+      refreshPrintPrinters();
+    }
+  }
+
+  function setStatus(elementId, message, type = 'info') {
+    const element = document.getElementById(elementId);
+    element.className = `status ${type}`;
+    element.textContent = message;
+    element.style.display = 'block';
+    element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function clearStatus() {
+    document.getElementById('overviewStatus').innerHTML = 'Status cleared. Ready for next action.';
+  }
+
+  function getServerUrl() {
+    return document.getElementById('serverUrl').value.trim();
+  }
+
+  // ============================================
+  // Server & Health Check
+  // ============================================
+
+  async function testConnection() {
+    try {
+      setStatus('connectionStatus', 'Testing connection...', 'info');
+      const url = getServerUrl();
+      const response = await fetch(url + '/health', { method: 'GET' });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+      
+      const data = await response.json();
+      setStatus(
+        'connectionStatus',
+        '✓ Connected successfully!\n\n' + JSON.stringify(data, null, 2),
+        'success'
+      );
+    } catch (err) {
+      setStatus(
+        'connectionStatus',
+        '✗ Connection failed:\n' + err.message,
+        'error'
+      );
+    }
+  }
+
+  async function checkHealth() {
+    try {
+      setStatus('overviewStatus', 'Checking server health...', 'info');
+      const response = await fetch(getServerUrl() + '/health');
+      
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+      
+      const data = await response.json();
+      setStatus(
+        'overviewStatus',
+        '✓ Server Status:\n\n' + JSON.stringify(data, null, 2),
+        'success'
+      );
+    } catch (err) {
+      setStatus('overviewStatus', '✗ Error:\n' + err.message, 'error');
+    }
+  }
+
+  // ============================================
+  // Printer Listing
+  // ============================================
+
+  async function listPrinters() {
+    try {
+      setStatus('overviewStatus', 'Loading printers...', 'info');
+      const response = await fetch(getServerUrl() + '/printers');
+      
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+      
+      const data = await response.json();
+      const printerList = document.getElementById('printerList');
+      
+      if (!data.printers || data.printers.length === 0) {
+        printerList.innerHTML = '<div class="printer-card">No printers registered yet.</div>';
+      } else {
+        printerList.innerHTML = data.printers.map(p => `
+          <div class="printer-card">
+            <strong>${p.name}</strong>
+            <small>Type: ${p.type} | Status: ${p.connected ? 'Connected' : 'Disconnected'}</small>
+          </div>
+        `).join('');
+      }
+      
+      setStatus('overviewStatus', '✓ Loaded ' + data.printers.length + ' printer(s)', 'success');
+    } catch (err) {
+      setStatus('overviewStatus', '✗ Error loading printers:\n' + err.message, 'error');
+    }
+  }
+
+  // ============================================
+  // Network Printer Functions
+  // ============================================
+
+  function populateNetworkExample() {
+    document.getElementById('networkName').value = 'network-printer-1';
+    document.getElementById('networkHost').value = '192.168.1.100';
+    document.getElementById('networkPort').value = '9100';
+    document.getElementById('networkTimeout').value = '5000';
+  }
+
+  async function registerNetworkPrinter() {
+    try {
+      setStatus('networkStatus', 'Registering network printer...', 'info');
+      
+      const payload = {
+        type: 'network',
+        name: document.getElementById('networkName').value.trim(),
+        host: document.getElementById('networkHost').value.trim(),
+        port: parseInt(document.getElementById('networkPort').value),
+        timeout: parseInt(document.getElementById('networkTimeout').value)
+      };
+      
+      if (!payload.name || !payload.host) {
+        throw new Error('Name and Host are required');
+      }
+      
+      const response = await fetch(getServerUrl() + '/printers', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.error || 'Registration failed');
+      }
+      
+      setStatus('networkStatus', '✓ Network printer registered!\n\n' + JSON.stringify(data, null, 2), 'success');
+      refreshNetworkPrinters();
+      refreshPrintPrinters();
+    } catch (err) {
+      setStatus('networkStatus', '✗ Registration failed:\n' + err.message, 'error');
+    }
+  }
+
+  async function refreshNetworkPrinters() {
+    try {
+      const response = await fetch(getServerUrl() + '/printers');
+      const data = await response.json();
+      const select = document.getElementById('networkPrinterSelect');
+      
+      const networkPrinters = data.printers.filter(p => p.type === 'network');
+      select.innerHTML = networkPrinters.length === 0
+        ? '<option value="">-- No network printers --</option>'
+        : networkPrinters.map(p => `<option value="${p.name}">${p.name}</option>`).join('');
+    } catch (err) {
+      console.error('Error refreshing network printers:', err);
+    }
+  }
+
+  async function testNetworkPrinterConnection() {
+    try {
+      const printerName = document.getElementById('networkPrinterSelect').value.trim();
+      
+      if (!printerName) {
+        setStatus('networkTestStatus', '✗ Please select a printer', 'error');
+        return;
+      }
+      
+      setStatus('networkTestStatus', `Testing connection to ${printerName}...`, 'info');
+      
+      // Try to send a simple text print to test connection
+      const response = await fetch(getServerUrl() + '/print/text', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          printer: printerName,
+          lines: ['Connection Test']
+        })
+      });
+      
+      const data = await response.json();
+      
+      if (response.ok) {
+        setStatus('networkTestStatus', '✓ Connection successful!\n\n' + JSON.stringify(data, null, 2), 'success');
+      } else {
+        setStatus('networkTestStatus', '⚠ Printer may not be reachable:\n' + JSON.stringify(data, null, 2), 'error');
+      }
+    } catch (err) {
+      setStatus('networkTestStatus', '✗ Connection test failed:\n' + err.message, 'error');
+    }
+  }
+
+  // ============================================
+  // USB Printer Functions
+  // ============================================
+
+  function populateUsbExample() {
+    document.getElementById('usbName').value = 'usb-thermal-1';
+    document.getElementById('usbVendorId').value = '0x04b8';
+    document.getElementById('usbProductId').value = '0x0202';
+  }
+
+  async function registerUsbPrinter() {
+    try {
+      setStatus('usbStatus', 'Registering USB printer...', 'info');
+      
+      const vendorId = document.getElementById('usbVendorId').value.trim();
+      const productId = document.getElementById('usbProductId').value.trim();
+      
+      const payload = {
+        type: 'usb',
+        name: document.getElementById('usbName').value.trim(),
+        vendorId: vendorId.startsWith('0x') ? parseInt(vendorId, 16) : parseInt(vendorId),
+        productId: productId.startsWith('0x') ? parseInt(productId, 16) : parseInt(productId)
+      };
+      
+      if (!payload.name || !payload.vendorId || !payload.productId) {
+        throw new Error('Name, Vendor ID, and Product ID are required');
+      }
+      
+      const response = await fetch(getServerUrl() + '/printers', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.error || 'Registration failed');
+      }
+      
+      setStatus('usbStatus', '✓ USB printer registered!\n\n' + JSON.stringify(data, null, 2), 'success');
+      refreshUsbPrinters();
+      refreshPrintPrinters();
+    } catch (err) {
+      setStatus('usbStatus', '✗ Registration failed:\n' + err.message, 'error');
+    }
+  }
+
+  async function refreshUsbPrinters() {
+    try {
+      const response = await fetch(getServerUrl() + '/printers');
+      const data = await response.json();
+      const select = document.getElementById('usbPrinterSelect');
+      
+      const usbPrinters = data.printers.filter(p => p.type === 'usb');
+      select.innerHTML = usbPrinters.length === 0
+        ? '<option value="">-- No USB printers --</option>'
+        : usbPrinters.map(p => `<option value="${p.name}">${p.name}</option>`).join('');
+    } catch (err) {
+      console.error('Error refreshing USB printers:', err);
+    }
+  }
+
+  async function testUsbPrinterConnection() {
+    try {
+      const printerName = document.getElementById('usbPrinterSelect').value.trim();
+      
+      if (!printerName) {
+        setStatus('usbTestStatus', '✗ Please select a printer', 'error');
+        return;
+      }
+      
+      setStatus('usbTestStatus', `Testing connection to ${printerName}...`, 'info');
+      
+      const response = await fetch(getServerUrl() + '/print/text', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          printer: printerName,
+          lines: ['USB Test']
+        })
+      });
+      
+      const data = await response.json();
+      
+      if (response.ok) {
+        setStatus('usbTestStatus', '✓ USB printer responsive!\n\n' + JSON.stringify(data, null, 2), 'success');
+      } else {
+        setStatus('usbTestStatus', '⚠ USB printer not found or not connected:\n' + JSON.stringify(data, null, 2), 'error');
+      }
+    } catch (err) {
+      setStatus('usbTestStatus', '✗ Connection test failed:\n' + err.message, 'error');
+    }
+  }
+
+  // ============================================
+  // Print Functions
+  // ============================================
+
+  async function refreshPrintPrinters() {
+    try {
+      const response = await fetch(getServerUrl() + '/printers');
+      const data = await response.json();
+      
+      const selects = ['printPrinterSelect', 'rawPrinterSelect'];
+      selects.forEach(selectId => {
+        const select = document.getElementById(selectId);
+        select.innerHTML = data.printers.length === 0
+          ? '<option value="">-- No printers registered --</option>'
+          : data.printers.map(p => `<option value="${p.name}">${p.name} (${p.type})</option>`).join('');
+      });
+    } catch (err) {
+      console.error('Error refreshing print printers:', err);
+    }
+  }
+
+  async function sendTextPrint() {
+    try {
+      const printer = document.getElementById('printPrinterSelect').value.trim();
+      
+      if (!printer) {
+        setStatus('textPrintStatus', '✗ Please select a printer', 'error');
+        return;
+      }
+      
+      const lines = document.getElementById('receiptText').value
+        .split('\n')
+        .filter(line => line.trim());
+      
+      if (lines.length === 0) {
+        setStatus('textPrintStatus', '✗ Please enter receipt text', 'error');
+        return;
+      }
+      
+      setStatus('textPrintStatus', `Sending text receipt to ${printer}...`, 'info');
+      
+      const response = await fetch(getServerUrl() + '/print/text', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ printer, lines })
+      });
+      
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.error || 'Print failed');
+      }
+      
+      setStatus('textPrintStatus', '✓ Text printed successfully!\n\n' + JSON.stringify(data, null, 2), 'success');
+    } catch (err) {
+      setStatus('textPrintStatus', '✗ Print failed:\n' + err.message, 'error');
+    }
+  }
+
+  async function sendRawPrint() {
+    try {
+      const printer = document.getElementById('rawPrinterSelect').value.trim();
+      const encoding = document.getElementById('dataEncoding').value;
+      const data = document.getElementById('rawData').value.trim();
+      
+      if (!printer) {
+        setStatus('rawPrintStatus', '✗ Please select a printer', 'error');
+        return;
+      }
+      
+      if (!data) {
+        setStatus('rawPrintStatus', '✗ Please enter raw data', 'error');
+        return;
+      }
+      
+      setStatus('rawPrintStatus', `Sending raw data to ${printer}...`, 'info');
+      
+      const response = await fetch(getServerUrl() + '/print/raw', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ printer, data, encoding })
+      });
+      
+      const responseData = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(responseData.error || 'Print failed');
+      }
+      
+      setStatus('rawPrintStatus', '✓ Raw data sent successfully!\n\n' + JSON.stringify(responseData, null, 2), 'success');
+    } catch (err) {
+      setStatus('rawPrintStatus', '✗ Print failed:\n' + err.message, 'error');
+    }
+  }
+
+  // ============================================
+  // Printer Deletion
+  // ============================================
+
+  async function refreshDeletePrinters() {
+    try {
+      const response = await fetch(getServerUrl() + '/printers');
+      const data = await response.json();
+      const select = document.getElementById('deletePrinterSelect');
+      
+      select.innerHTML = data.printers.length === 0
+        ? '<option value="">-- No printers --</option>'
+        : data.printers.map(p => `<option value="${p.name}">${p.name}</option>`).join('');
+    } catch (err) {
+      console.error('Error refreshing delete list:', err);
+    }
+  }
+
+  async function deletePrinter() {
+    try {
+      const printerName = document.getElementById('deletePrinterSelect').value.trim();
+      
+      if (!printerName) {
+        setStatus('deleteStatus', '✗ Please select a printer', 'error');
+        return;
+      }
+      
+      if (!confirm(`Are you sure you want to delete "${printerName}"?`)) {
+        return;
+      }
+      
+      setStatus('deleteStatus', `Deleting ${printerName}...`, 'info');
+      
+      const response = await fetch(getServerUrl() + '/printers/' + printerName, {
+        method: 'DELETE'
+      });
+      
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.error || 'Deletion failed');
+      }
+      
+      setStatus('deleteStatus', '✓ Printer deleted!\n\n' + JSON.stringify(data, null, 2), 'success');
+      refreshDeletePrinters();
+      refreshPrintPrinters();
+    } catch (err) {
+      setStatus('deleteStatus', '✗ Deletion failed:\n' + err.message, 'error');
+    }
+  }
+
+  // ============================================
+  // Utility Functions
+  // ============================================
+
+  function generateBase64Sample(type) {
+    let data = '';
+    
+    if (type === 'hello') {
+      // ESC @ + "Hello World!" + LF
+      data = btoa('\x1b@Hello World!\n');
+    } else if (type === 'reset') {
+      // Just ESC @
+      data = btoa('\x1b@');
+    } else if (type === 'feed') {
+      // ESC d (feed N lines) - feed 5 lines
+      data = btoa('\x1bd\x05');
+    }
+    
+    document.getElementById('generatedBase64').value = data;
+  }
+
+  // ============================================
+  // Initialization
+  // ============================================
+
+  document.addEventListener('DOMContentLoaded', () => {
+    listPrinters();
+    refreshNetworkPrinters();
+    refreshUsbPrinters();
+    refreshPrintPrinters();
+    refreshDeletePrinters();
+  });
+</script>
+
+</body>
+</html>

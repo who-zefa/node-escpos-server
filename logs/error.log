@@ -1,0 +1,2 @@
+[2026-05-15 13:40:50] ERROR: Text print job failed {"error":"Printer 'test-register' is not registered. Use GET /printers to list available printers.","printer":"test-register"}
+[2026-05-15 13:42:58] ERROR: Text print job failed {"error":"Connection timed out: 192.168.1.100:9100","printer":"office-printer"}
