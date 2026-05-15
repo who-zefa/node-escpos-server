@@ -136,35 +136,6 @@ Cloud POS / Local POS / Web App
 
 ---
 
-## Project Structure
-
-```
-node-escpos-server/
-├── src/
-│   ├── printers/
-│   │   ├── BasePrinter.js       # Abstract base class
-│   │   ├── UsbPrinter.js        # USB adapter
-│   │   └── NetworkPrinter.js    # TCP/IP adapter
-│   ├── routes/
-│   │   ├── health.js            # GET /health
-│   │   ├── printers.js          # CRUD /printers
-│   │   └── print.js             # POST /print/raw, /print/text
-│   ├── services/
-│   │   ├── printerRegistry.js   # Printer registry singleton
-│   │   └── printService.js      # High-level print orchestration
-│   ├── utils/
-│   │   ├── logger.js            # Winston logger
-│   │   └── escpos.js            # ESC/POS command constants & helpers
-│   └── server.js                # Express app entry point
-├── tests/
-├── examples/
-├── docs/
-├── .env.example
-├── ROADMAP.md
-└── README.md
-```
-
----
 
 ## Running Tests
 
